@@ -11,7 +11,7 @@ class Person:
             raise RuntimeError("family_name must required.")
         elif not first_name or first_name.strip() == "":
             raise RuntimeError("first_name must required.")
-        elif not gender or gender not in GENDER:
+        elif gender not in GENDER:
             raise RuntimeError("illegal gender.")
 
         self._family_name = family_name

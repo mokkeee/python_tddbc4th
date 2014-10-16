@@ -8,7 +8,7 @@
     </list>
     <ignored path="python_tddbc4th.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413465719140" ignored="false" />
+    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413469977929" ignored="false" />
     <file path="/test_person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413469806844" ignored="false" />
     <file path="/person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413469933644" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,7 +74,7 @@
       <file leaf-file-name="test_person.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acme/test_person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="26" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.6605375">
+            <state line="61" column="21" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.7666195">
               <folding>
                 <element signature="e#46#82#0" expanded="true" />
               </folding>
@@ -85,7 +85,7 @@
       <file leaf-file-name="person.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/acme/person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="46" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+            <state line="18" column="28" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,8 +109,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/acme/test_person.py" />
         <option value="$PROJECT_DIR$/acme/person.py" />
+        <option value="$PROJECT_DIR$/tests/acme/test_person.py" />
       </list>
     </option>
   </component>
@@ -467,7 +467,11 @@
       <created>1413465730315</created>
       <updated>1413465730315</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="性別を追加">
+      <created>1413469985109</created>
+      <updated>1413469985109</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -546,7 +550,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="鈴木花子のテスト追加、苗字か名前にスペースのみの指定はNGとした" />
+    <option name="LAST_COMMIT_MESSAGE" value="性別を追加" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -566,6 +570,7 @@
     <MESSAGE value="課題１実装" />
     <MESSAGE value="Person生成エラーをclassにまとめた" />
     <MESSAGE value="鈴木花子のテスト追加、苗字か名前にスペースのみの指定はNGとした" />
+    <MESSAGE value="性別を追加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -642,14 +647,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/acme/person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+        <state line="18" column="28" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acme/test_person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="26" selection-start="1511" selection-end="1511" vertical-scroll-proportion="0.6605375">
+        <state line="61" column="21" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.7666195">
           <folding>
             <element signature="e#46#82#0" expanded="true" />
           </folding>

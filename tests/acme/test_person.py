@@ -59,6 +59,7 @@ class TestPerson生成エラー:
         ("佐藤", " ", MALE),
         ("  ", "一郎", MALE),
         ("佐藤", "一郎", None),
+        ("佐藤", "一郎", 0),
         ("佐藤", "一郎", 3),
     ])
     def test_Person生成エラー(self, family_name, first_name, gender):
