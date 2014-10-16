@@ -20,14 +20,15 @@ class Test佐藤一郎:
         assert self.佐藤一郎.full_name == '佐藤一郎'
 
 
-@pytest.mark.parametrize(("family_name", "first_name"),[
-    ("佐藤", ""),
-    ("", "一郎"),
-    ("", ""),
-    ("佐藤", None),
-    (None, "一郎"),
-    (None, None),
-])
-def test_Person生成エラー(family_name, first_name):
-    with pytest.raises(RuntimeError):
-        Person(family_name, first_name)
+class TestPerson生成エラー:
+    @pytest.mark.parametrize(("family_name", "first_name"),[
+        ("佐藤", ""),
+        ("", "一郎"),
+        ("", ""),
+        ("佐藤", None),
+        (None, "一郎"),
+        (None, None),
+    ])
+    def test_Person生成エラー(self, family_name, first_name):
+        with pytest.raises(RuntimeError):
+            Person(family_name, first_name)
