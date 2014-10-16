@@ -3,9 +3,9 @@
 
 class Person:
     def __init__(self, family_name, first_name):
-        if family_name is None or family_name == "":
+        if family_name is None or family_name.strip() == "":
             raise RuntimeError("family_name must required.")
-        elif first_name is None or first_name == "":
+        elif first_name is None or first_name.strip() == "":
             raise RuntimeError("first_name must required.")
 
         self._family_name = family_name
