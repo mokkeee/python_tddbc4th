@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acme/person.py" afterPath="$PROJECT_DIR$/acme/person.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acme/test_person.py" afterPath="$PROJECT_DIR$/tests/acme/test_person.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="python_tddbc4th.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413561327487" ignored="false" />
-    <file path="/test_person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413566887847" ignored="false" />
+    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413567023718" ignored="false" />
+    <file path="/test_person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413567145443" ignored="false" />
     <file path="/person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413566617170" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,10 +70,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test_person.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="test_person.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/acme/test_person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="43" selection-start="2534" selection-end="2534" vertical-scroll-proportion="0.7029703">
+            <state line="56" column="49" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#46#82#0" expanded="true" />
               </folding>
@@ -82,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="person.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="person.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/acme/person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="8" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
+            <state line="19" column="38" selection-start="687" selection-end="687" vertical-scroll-proportion="-0.12446959">
               <folding />
             </state>
           </provider>
@@ -109,8 +108,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/acme/test_person.py" />
         <option value="$PROJECT_DIR$/acme/person.py" />
+        <option value="$PROJECT_DIR$/tests/acme/test_person.py" />
       </list>
     </option>
   </component>
@@ -583,7 +582,11 @@
       <created>1413561336815</created>
       <updated>1413561336815</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="誕生日を追加">
+      <created>1413567028672</created>
+      <updated>1413567028672</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -662,7 +665,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="性別判定の方法を修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="誕生日を追加" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -686,6 +689,7 @@
     <MESSAGE value="性別の判定処理を修正" />
     <MESSAGE value="結婚判定を追加" />
     <MESSAGE value="性別判定の方法を修正" />
+    <MESSAGE value="誕生日を追加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -760,19 +764,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/acme/person.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="538" selection-end="538" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/acme/test_person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="43" selection-start="2534" selection-end="2534" vertical-scroll-proportion="0.7029703">
+        <state line="56" column="49" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#46#82#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/acme/person.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="38" selection-start="687" selection-end="687" vertical-scroll-proportion="-0.12446959">
+          <folding />
         </state>
       </provider>
     </entry>

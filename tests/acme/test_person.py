@@ -53,6 +53,9 @@ class Test鈴木花子:
         assert self.鈴木花子.gender is not MALE
         assert self.鈴木花子.is_male() == False
 
+    def test_誕生日を指定しないと今日が誕生日になること(self):
+        assert self.鈴木花子.birthday == date.today()
+
 class Test結婚出来るか:
     佐藤一郎 = Person('佐藤', '一郎', MALE)
     田中雄二 = Person('田中', '雄二', MALE)
