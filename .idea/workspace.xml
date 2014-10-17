@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acme/person.py" afterPath="$PROJECT_DIR$/acme/person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acme/test_person.py" afterPath="$PROJECT_DIR$/tests/acme/test_person.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="python_tddbc4th.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413470131828" ignored="false" />
+    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413561221054" ignored="false" />
     <file path="/test_person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413561107874" ignored="false" />
-    <file path="/person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413560774257" ignored="false" />
+    <file path="/person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413561280911" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <file leaf-file-name="person.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/acme/person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.9335219">
+            <state line="49" column="28" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.7454031">
               <folding />
             </state>
           </provider>
@@ -109,8 +108,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/acme/person.py" />
         <option value="$PROJECT_DIR$/tests/acme/test_person.py" />
+        <option value="$PROJECT_DIR$/acme/person.py" />
       </list>
     </option>
   </component>
@@ -497,7 +496,11 @@
       <created>1413470137610</created>
       <updated>1413470137610</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="結婚判定を追加">
+      <created>1413561225674</created>
+      <updated>1413561225674</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -576,7 +579,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="性別の判定処理を修正" />
+    <option name="LAST_COMMIT_MESSAGE" value="結婚判定を追加" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -598,6 +601,7 @@
     <MESSAGE value="鈴木花子のテスト追加、苗字か名前にスペースのみの指定はNGとした" />
     <MESSAGE value="性別を追加" />
     <MESSAGE value="性別の判定処理を修正" />
+    <MESSAGE value="結婚判定を追加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -683,7 +687,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/acme/person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.9335219">
+        <state line="49" column="28" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.7454031">
           <folding />
         </state>
       </provider>

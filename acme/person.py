@@ -47,10 +47,10 @@ class Person:
         return self._gender
 
     def is_male(self):
-        return self.gender == MALE
+        return self.gender is MALE
 
     def is_female(self):
-        return self.gender == FEMALE
+        return self.gender is FEMALE
 
     def can_marry(self, pare):
-        return self.gender != pare.gender
+        return self.gender is not pare.gender
