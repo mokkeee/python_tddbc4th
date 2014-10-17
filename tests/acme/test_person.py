@@ -48,7 +48,22 @@ class Test鈴木花子:
         assert self.鈴木花子.gender is not MALE
         assert self.鈴木花子.is_male() == False
 
-class TestPerson生成エラー:
+class Test結婚出来るか:
+    佐藤一郎 = Person('佐藤', '一郎', MALE)
+    田中雄二 = Person('田中', '雄二', MALE)
+    鈴木花子 = Person('鈴木', '花子', FEMALE)
+    高橋裕美 = Person('高橋', '裕美', FEMALE)
+
+    @pytest.mark.parametrize(("person1", "person2", "we_can"),[
+        (佐藤一郎, 田中雄二, False),
+        (佐藤一郎, 鈴木花子, True),
+        (鈴木花子, 高橋裕美, False),
+        (高橋裕美, 佐藤一郎, True),
+    ])
+    def test_異性と結婚できて同性とは結婚できない(self, person1, person2, we_can):
+        assert person1.can_marry(person2) == we_can
+
+class Test不正パラメータ:
     @pytest.mark.parametrize(("family_name", "first_name", "gender"),[
         ("佐藤", "", MALE),
         ("", "一郎", MALE),
@@ -62,6 +77,6 @@ class TestPerson生成エラー:
         ("佐藤", "一郎", 0),
         ("佐藤", "一郎", 3),
     ])
-    def test_Person生成エラー(self, family_name, first_name, gender):
+    def test_不正パラメータでRuntimeErrorとなること(self, family_name, first_name, gender):
         with pytest.raises(RuntimeError):
             Person(family_name, first_name, gender)

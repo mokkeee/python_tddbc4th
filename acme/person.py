@@ -6,7 +6,7 @@ FEMALE = 2
 GENDER = (MALE, FEMALE)
 
 class Person:
-    def __init__(self, family_name, first_name, gender = MALE):
+    def __init__(self, family_name, first_name, gender):
         if not family_name or family_name.strip() == "":
             raise RuntimeError("family_name must required.")
         elif not first_name or first_name.strip() == "":
@@ -51,3 +51,6 @@ class Person:
 
     def is_female(self):
         return self.gender == FEMALE
+
+    def can_marry(self, pare):
+        return self.gender != pare.gender
