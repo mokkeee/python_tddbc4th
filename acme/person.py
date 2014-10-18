@@ -57,6 +57,13 @@ class Person:
         """
         return self._birthday
 
+    def age(self, base_date=date.today()):
+        year_diff = base_date.year - self.birthday.year
+        if self.birthday <= base_date.replace(year=self.birthday.year):
+            return year_diff
+        else:
+            return year_diff - 1
+
     def is_male(self):
         return self.gender is MALE
 
