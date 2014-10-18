@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from datetime import date, timedelta
-from wsgiref.validate import assert_
 import pytest
 from acme.person import Person, MALE, FEMALE
 
@@ -66,20 +65,6 @@ class Test鈴木花子:
     def test_誕生日を指定しないと今日が誕生日になること(self):
         assert self.鈴木花子.birthday == date.today()
 
-class Test結婚出来るか:
-    佐藤一郎 = Person('佐藤', '一郎', MALE)
-    田中雄二 = Person('田中', '雄二', MALE)
-    鈴木花子 = Person('鈴木', '花子', FEMALE)
-    高橋裕美 = Person('高橋', '裕美', FEMALE)
-
-    @pytest.mark.parametrize(("person1", "person2", "marriable"),[
-        (佐藤一郎, 田中雄二, False),
-        (佐藤一郎, 鈴木花子, True),
-        (鈴木花子, 高橋裕美, False),
-        (高橋裕美, 佐藤一郎, True),
-    ])
-    def test_異性と結婚できて同性とは結婚できない(self, person1, person2, marriable):
-        assert person1.can_marry(person2) == marriable
 
 class Test不正パラメータ:
     @pytest.mark.parametrize(("family_name", "first_name", "gender"),[
