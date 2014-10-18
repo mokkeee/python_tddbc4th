@@ -3,13 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/motegi.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/motegi.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acme/person.py" afterPath="$PROJECT_DIR$/acme/person.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acme/test_person.py" afterPath="$PROJECT_DIR$/tests/acme/test_person.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="python_tddbc4th.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413616069367" ignored="false" />
-    <file path="/test_person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413616015893" ignored="false" />
-    <file path="/person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413615805867" ignored="false" />
+    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413616189292" ignored="false" />
+    <file path="/test_person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413617459322" ignored="false" />
+    <file path="/person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413617425933" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
       <file leaf-file-name="test_person.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acme/test_person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="38" selection-start="664" selection-end="664" vertical-scroll-proportion="0.5304102">
+            <state line="42" column="24" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.70014143">
               <folding>
                 <element signature="e#46#82#0" expanded="true" />
               </folding>
@@ -84,7 +86,7 @@
       <file leaf-file-name="person.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/acme/person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="25" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0">
+            <state line="62" column="32" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -285,31 +287,7 @@
       <recent name="C:\Users\motegi\IdeaProjects\python_tddbc4th\tests\acme" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月10日時点で40歳である">
-    <configuration default="false" name="Nosetest Test佐藤一郎.test_佐藤一郎の誕生日が取得できること" type="tests" factoryName="Nosetests" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/acme" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python_tddbc4th" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/acme/test_person.py" />
-      <option name="CLASS_NAME" value="Test佐藤一郎" />
-      <option name="METHOD_NAME" value="test_佐藤一郎の誕生日が取得できること" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Nosetest Test不正パラメータ.test_文字列指定で年齢取得しようとするとエラーになること">
     <configuration default="false" name="Nosetest Test不正パラメータ.test_不正パラメータでRuntimeErrorとなること" type="tests" factoryName="Nosetests" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -396,6 +374,30 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/acme/test_person.py" />
       <option name="CLASS_NAME" value="Test佐藤一郎" />
       <option name="METHOD_NAME" value="test_佐藤一郎は2014年10月10日時点で40歳である" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetest Test不正パラメータ.test_文字列指定で年齢取得しようとするとエラーになること" type="tests" factoryName="Nosetests" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/acme" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python_tddbc4th" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/acme/test_person.py" />
+      <option name="CLASS_NAME" value="Test不正パラメータ" />
+      <option name="METHOD_NAME" value="test_文字列指定で年齢取得しようとするとエラーになること" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -557,19 +559,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎の誕生日が取得できること" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_不正パラメータでRuntimeErrorとなること" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_誕生日に未来の日付を指定したときRuntimeErrorとなること" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月9日時点で39歳である" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月10日時点で40歳である" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_不正パラメータでRuntimeErrorとなること" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_誕生日に未来の日付を指定したときRuntimeErrorとなること" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月9日時点で39歳である" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月10日時点で40歳である" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_文字列指定で年齢取得しようとするとエラーになること" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月10日時点で40歳である" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月9日時点で39歳である" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_誕生日に未来の日付を指定したときRuntimeErrorとなること" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_不正パラメータでRuntimeErrorとなること" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎の誕生日が取得できること" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_文字列指定で年齢取得しようとするとエラーになること" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月10日時点で40歳である" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest Test佐藤一郎.test_佐藤一郎は2014年10月9日時点で39歳である" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_誕生日に未来の日付を指定したときRuntimeErrorとなること" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetest Test不正パラメータ.test_不正パラメータでRuntimeErrorとなること" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -661,12 +663,16 @@
       <created>1413616085827</created>
       <updated>1413616085827</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ある時点における年齢を取得するメソッド追加">
+      <created>1413616177171</created>
+      <updated>1413616177171</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -688,7 +694,7 @@
       <window_info id="Code Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.6703146" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24935733" sideWeight="0.6703146" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Graphical Navigator" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -844,14 +850,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/acme/person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="25" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0">
+        <state line="62" column="32" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acme/test_person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="38" selection-start="664" selection-end="664" vertical-scroll-proportion="0.5304102">
+        <state line="42" column="24" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.70014143">
           <folding>
             <element signature="e#46#82#0" expanded="true" />
           </folding>

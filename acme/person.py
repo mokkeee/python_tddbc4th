@@ -58,6 +58,15 @@ class Person:
         return self._birthday
 
     def age(self, base_date=date.today()):
+        """
+        指定された年月日の年齢
+        誕生日以前の日付が指定された場合はNoneを返す
+        """
+        if type(base_date) is not date:
+            raise RuntimeError("base_date must be date.")
+        if self.birthday > base_date:
+            return None
+
         year_diff = base_date.year - self.birthday.year
         if self.birthday <= base_date.replace(year=self.birthday.year):
             return year_diff
