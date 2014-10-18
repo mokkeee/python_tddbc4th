@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/motegi.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/motegi.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acme/person.py" afterPath="$PROJECT_DIR$/acme/person.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/acme/test_person.py" afterPath="$PROJECT_DIR$/tests/acme/test_person.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="python_tddbc4th.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413613949832" ignored="false" />
+    <file path="/Dummy.txt" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413616069367" ignored="false" />
     <file path="/test_person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413616015893" ignored="false" />
     <file path="/person.py" changelist="75fb6983-eea8-4ada-9b5c-a4a4ac5f97ad" time="1413615805867" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,7 +73,7 @@
       <file leaf-file-name="test_person.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/acme/test_person.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="59" selection-start="3046" selection-end="3046" vertical-scroll-proportion="2.1852899">
+            <state line="25" column="38" selection-start="664" selection-end="664" vertical-scroll-proportion="0.5304102">
               <folding>
                 <element signature="e#46#82#0" expanded="true" />
               </folding>
@@ -215,6 +213,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="acme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python_tddbc4th" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python_tddbc4th" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python_tddbc4th" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python_tddbc4th" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dictionaries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,7 +657,11 @@
       <created>1413613955192</created>
       <updated>1413613955192</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ある時点における年齢を取得するメソッド追加">
+      <created>1413616085827</created>
+      <updated>1413616085827</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -706,7 +740,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="不要なカッコを削除" />
+    <option name="LAST_COMMIT_MESSAGE" value="ある時点における年齢を取得するメソッド追加" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -733,6 +767,7 @@
     <MESSAGE value="誕生日を追加" />
     <MESSAGE value="誕生日指定なしのテストケース追加" />
     <MESSAGE value="不要なカッコを削除" />
+    <MESSAGE value="ある時点における年齢を取得するメソッド追加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -816,7 +851,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/acme/test_person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="59" selection-start="3046" selection-end="3046" vertical-scroll-proportion="2.1852899">
+        <state line="25" column="38" selection-start="664" selection-end="664" vertical-scroll-proportion="0.5304102">
           <folding>
             <element signature="e#46#82#0" expanded="true" />
           </folding>
