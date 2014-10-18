@@ -62,14 +62,14 @@ class Test結婚出来るか:
     鈴木花子 = Person('鈴木', '花子', FEMALE)
     高橋裕美 = Person('高橋', '裕美', FEMALE)
 
-    @pytest.mark.parametrize(("person1", "person2", "we_can"),[
+    @pytest.mark.parametrize(("person1", "person2", "marriable"),[
         (佐藤一郎, 田中雄二, False),
         (佐藤一郎, 鈴木花子, True),
         (鈴木花子, 高橋裕美, False),
         (高橋裕美, 佐藤一郎, True),
     ])
-    def test_異性と結婚できて同性とは結婚できない(self, person1, person2, we_can):
-        assert person1.can_marry(person2) == we_can
+    def test_異性と結婚できて同性とは結婚できない(self, person1, person2, marriable):
+        assert person1.can_marry(person2) == marriable
 
 class Test不正パラメータ:
     @pytest.mark.parametrize(("family_name", "first_name", "gender"),[
@@ -89,10 +89,10 @@ class Test不正パラメータ:
         with pytest.raises(RuntimeError):
             Person(family_name, first_name, gender)
 
-    @pytest.mark.parametrize(("birthday"), [
-        (None),
-        ("2014/10/17"), # not date
-        (date.today() + timedelta(days=1)), # future
+    @pytest.mark.parametrize("birthday", [
+        None,
+        "2014/10/17", # not date
+        date.today() + timedelta(days=1), # future
     ])
     def test_誕生日指定不正のときRuntimeErrorとなること(self, birthday):
         with pytest.raises(RuntimeError):
