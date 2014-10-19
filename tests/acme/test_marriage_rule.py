@@ -17,12 +17,12 @@ class Test結婚出来るか:
     female_15 = Person('森本', '由紀', FEMALE, judge_day.replace(year=2014-15)) # 15 years old. cannot marry.
 
     @pytest.mark.parametrize(("person1", "person2", "marriable"),[
-        (male_18, male_19, False),
         (male_18, female_16, True),
-        (female_16, female_17, False),
         (female_17, male_19, True),
-        (female_16, male_17, False),
-        (male_18, female_15, False),
+        (male_18, male_19, False),      # male and male
+        (female_16, female_17, False),  # female and female
+        (female_16, male_17, False),    # male is under 18 years old
+        (male_18, female_15, False),    # female is under 16 years old
         ])
     def test_18歳以上の男子と16歳以上の女子が結婚できる(self, person1, person2, marriable):
         assert marriage_rule.can_marry(person1, person2, self.judge_day) == marriable
