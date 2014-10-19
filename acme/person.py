@@ -78,6 +78,3 @@ class Person:
 
     def is_female(self):
         return self.gender is FEMALE
-
-    def can_marry(self, pare):
-        return self.gender is not pare.gender
