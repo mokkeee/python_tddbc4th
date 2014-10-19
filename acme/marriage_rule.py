@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from datetime import date
+from acme.person import Person
 
 
 __MARRIABLE_AGE_MALE_MIN = 18
@@ -8,9 +9,15 @@ __MARRIABLE_AGE_FEMALE_MIN = 16
 
 
 def can_marry(person1, person2, judge_day=date.today()):
+    if type(person1) is not Person:
+        raise RuntimeError("person1 must be Person.")
+    if type(person2) is not Person:
+        raise RuntimeError("person2 must be Person.")
+    if type(judge_day) is not date:
+        raise RuntimeError("judge_day must be date.")
+
     if person1.gender == person2.gender:
         return False
-
     if person1.is_male():
         male = person1
         female = person2

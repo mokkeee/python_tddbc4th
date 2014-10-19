@@ -8,6 +8,7 @@ from acme.person import Person, MALE, FEMALE
 
 class Test結婚出来るか:
     judge_day = date(2014, 10, 19)
+
     male_18 = Person('佐藤', '一郎', MALE, judge_day.replace(year=2014-18))  # 18 years old.
     male_19 = Person('田中', '雄二', MALE, judge_day.replace(year=2014-19))  # 19 years old.
     male_17 = Person('三浦', '智士', MALE, judge_day.replace(year=2014-17))  # 17 years old. cannot marry.
@@ -25,3 +26,15 @@ class Test結婚出来るか:
         ])
     def test_18歳以上の男子と16歳以上の女子が結婚できる(self, person1, person2, marriable):
         assert marriage_rule.can_marry(person1, person2, self.judge_day) == marriable
+
+    @pytest.mark.parametrize(("person1", "person2", "judge_day"), [
+        (None, female_16, date.today()),
+        (male_19, None, date.today()),
+        (male_19, female_17, None),
+        ("male_str", female_16, date.today()),
+        (male_18, "female_str", date.today()),
+        (male_19, female_17, "2014/10/19"),
+    ])
+    def test_パラメータ不正のときRuntimeErrorとなること(self, person1, person2, judge_day):
+        with pytest.raises(RuntimeError):
+            marriage_rule.can_marry(person1, person2, judge_day)
