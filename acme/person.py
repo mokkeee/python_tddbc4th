@@ -60,7 +60,8 @@ class Person:
     def age(self, base_date=date.today()):
         """
         指定された年月日の年齢
-        誕生日以前の日付が指定された場合はNoneを返す
+        :param base_date: 年齢計算の対象日 省略時は今日の日付
+        :return: 誕生日以前の日付が指定された場合はNoneを返す
         """
         if type(base_date) is not date:
             raise RuntimeError("base_date must be date.")
