@@ -91,7 +91,7 @@ class Test不正パラメータ:
     ])
     def test_誕生日指定不正のときRuntimeErrorとなること(self, birthday):
         with pytest.raises(RuntimeError):
-            Person("未来", "子", FEMALE, birthday)
+            Person("鈴木", "未来", FEMALE, birthday)
 
     def test_文字列指定で年齢取得するとRuntimeErrorになること(self):
         sut = Person("佐藤", "二郎", MALE)
