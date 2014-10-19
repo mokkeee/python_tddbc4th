@@ -6,3 +6,5 @@ MANIFEST
 dist/
 tests/coverage_html/
 tests/.coverage
+.idea/
+python_tddbc4th.iml
