@@ -6,7 +6,7 @@ from acme import marriage_rule
 from acme.person import Person, MALE, FEMALE
 
 
-class Test結婚出来るか:
+class Test結婚判定:
     judge_day = date(2014, 10, 19)
 
     male_18 = Person('佐藤', '一郎', MALE, judge_day.replace(year=2014-18))  # 18 years old.
@@ -23,18 +23,25 @@ class Test結婚出来るか:
         (female_16, female_17, False),  # female and female
         (female_16, male_17, False),    # male is under 18 years old
         (male_18, female_15, False),    # female is under 16 years old
-        ])
+        (Person('次の日', '生まれた子', MALE, judge_day.replace(day=20)), female_16, False),    # male not birth
+        (male_18, Person('次の日', '生まれた子', FEMALE, judge_day.replace(day=20)), False),    # female not birth
+    ])
     def test_18歳以上の男子と16歳以上の女子が結婚できる(self, person1, person2, marriable):
         assert marriage_rule.can_marry(person1, person2, self.judge_day) == marriable
 
+
+class Test不正パラメータ:
+    male = Person('佐藤', '一郎', MALE, date.today())
+    female = Person('鈴木', '花子', FEMALE, date.today())
+
     @pytest.mark.parametrize(("person1", "person2", "judge_day"), [
-        (None, female_16, date.today()),
-        (male_19, None, date.today()),
-        (male_19, female_17, None),
-        ("male_str", female_16, date.today()),
-        (male_18, "female_str", date.today()),
-        (male_19, female_17, "2014/10/19"),
+        (None, female, date.today()),
+        (male, None, date.today()),
+        (male, female, None),
+        ("male_str", female, date.today()),
+        (male, "female_str", date.today()),
+        (male, female, "2014/10/19"),
     ])
-    def test_パラメータ不正のときRuntimeErrorとなること(self, person1, person2, judge_day):
+    def test_パラメータ不正でcan_marry実行時RuntimeErrorとなること(self, person1, person2, judge_day):
         with pytest.raises(RuntimeError):
             marriage_rule.can_marry(person1, person2, judge_day)

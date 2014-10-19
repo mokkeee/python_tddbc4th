@@ -80,7 +80,7 @@ class Test不正パラメータ:
         ("佐藤", "一郎", 0),
         ("佐藤", "一郎", 3),
     ])
-    def test_不正パラメータでRuntimeErrorとなること(self, family_name, first_name, gender):
+    def test_不正パラメータでPerson生成時RuntimeErrorとなること(self, family_name, first_name, gender):
         with pytest.raises(RuntimeError):
             Person(family_name, first_name, gender)
 
@@ -89,7 +89,7 @@ class Test不正パラメータ:
         "2014/10/17", # not date
         date.today() + timedelta(days=1), # future(tomorrow)
     ])
-    def test_誕生日指定不正のときRuntimeErrorとなること(self, birthday):
+    def test_不正な誕生日指定でPerson生成時RuntimeErrorとなること(self, birthday):
         with pytest.raises(RuntimeError):
             Person("鈴木", "未来", FEMALE, birthday)
 
