@@ -25,9 +25,12 @@ def can_marry(person1, person2, judge_day=date.today()):
         male = person2
         female = person1
 
-    if male.age(judge_day) < __MARRIABLE_AGE_MALE_MIN:
+    male_age = male.age(judge_day)
+    if male_age is None or male_age < __MARRIABLE_AGE_MALE_MIN:
         return False
-    if female.age(judge_day) < __MARRIABLE_AGE_FEMALE_MIN:
+
+    female_age = female.age(judge_day)
+    if female_age is None or female_age < __MARRIABLE_AGE_FEMALE_MIN:
         return False
 
     return True
