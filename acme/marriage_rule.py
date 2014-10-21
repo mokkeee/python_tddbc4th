@@ -31,9 +31,12 @@ def can_marry(person1, person2, judge_day=date.today()):
     if judge_day >= __CURRENT_LAW_START_DAY:
         marriable_age_male_min = 18
         marriable_age_female_min = 16
-    else:
+    elif judge_day >= __MEIJI_LAW_START_DAY:
         marriable_age_male_min = 17
         marriable_age_female_min = 15
+    else:
+        marriable_age_male_min = 0
+        marriable_age_female_min = 0
 
     male_age = male.age(judge_day)
     if male_age is None or male_age < marriable_age_male_min:

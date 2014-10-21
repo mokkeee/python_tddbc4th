@@ -83,6 +83,27 @@ class Test結婚判定_between_1898_07_16_and_1947_12_21:
     def test_1898年7月16日から1947年12月21日の間は17歳以上の男子と15歳以上の女子が結婚できる(self, person1, person2, judge_day, marriable):
         assert marriage_rule.can_marry(person1, person2, judge_day) == marriable
 
+class Test結婚判定_before_1898_07_15:
+    before_meiji_law_lastday = date(1898, 7, 15)
+
+    male_born_lastday_1 = Person('18980715に生まれた', '男子', MALE, before_meiji_law_lastday)
+    male_born_lastday_2 = Person('18980715に生まれた', '男子2', MALE, before_meiji_law_lastday)
+    female_born_lastday_1 = Person('18980715に生まれた', '女子', FEMALE, before_meiji_law_lastday)
+    female_born_lastday_2 = Person('18980715に生まれた', '女子2', FEMALE, before_meiji_law_lastday)
+    male_born_18980715 = Person('次の日', '生まれた男子', MALE, before_meiji_law_lastday.replace(day=15+1))
+    female_born_18980715 = Person('次の日', '生まれた女子', FEMALE, before_meiji_law_lastday.replace(day=15+1))
+
+    @pytest.mark.parametrize(("person1", "person2", "judge_day", "marriable"), [
+        (male_born_lastday_1, female_born_lastday_1, before_meiji_law_lastday, True),
+        (male_born_lastday_1, male_born_lastday_2, before_meiji_law_lastday, False),
+        (female_born_lastday_1, female_born_lastday_2, before_meiji_law_lastday, False),
+        (female_born_lastday_2, male_born_lastday_2, before_meiji_law_lastday, True),
+        (female_born_lastday_2, male_born_18980715, before_meiji_law_lastday, False),
+        (male_born_lastday_2, female_born_18980715, before_meiji_law_lastday, False),
+    ])
+    def test_1898年7月15日以前は男女同士であれば結婚できる(self, person1, person2, judge_day, marriable):
+        assert marriage_rule.can_marry(person1, person2, judge_day) == marriable
+
 class Test不正パラメータ:
     male = Person('佐藤', '一郎', MALE, date.today())
     female = Person('鈴木', '花子', FEMALE, date.today())
