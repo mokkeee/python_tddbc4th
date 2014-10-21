@@ -79,3 +79,14 @@ class Person:
 
     def is_female(self):
         return self.gender is FEMALE
+
+    def __str__(self):
+        res = self.__class__.__name__
+        res += '(' + self._family_name + '_' + self._first_name
+        if self.is_male():
+            res += ' [MALE]'
+        else:
+            res += ' [FEMALE]'
+        res += ' birthday:' + self._birthday.__str__() + ')'
+        return res
+
