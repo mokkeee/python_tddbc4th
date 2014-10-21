@@ -54,12 +54,19 @@ class Test結婚判定_between_1898_07_16_and_1947_12_21:
     meiji_law_start_day = date(1898, 7, 16)
     meiji_law_end_day = date(1947, 12, 21)
 
-    male_17_in_1898 = Person('佐藤', '昭一', MALE, meiji_law_start_day.replace(year=1898-17))
-    male_18_in_1898 = Person('田中', '雄造', MALE, meiji_law_start_day.replace(year=1898-18))
-    male_16_in_1898 = Person('三浦', '太郎', MALE, meiji_law_start_day.replace(year=1898-17, day=16+1))
-    female_15_in_1898 = Person('鈴木', '弘子', FEMALE, meiji_law_start_day.replace(year=1898-15))
-    female_16_in_1898 = Person('高橋', '葉子', FEMALE, meiji_law_start_day.replace(year=1898-16))
-    female_14_in_1898 = Person('森本', '文子', FEMALE, meiji_law_start_day.replace(year=1898-15, day=16+1))
+    male_17_in_1898 = Person('18980716時点で17歳', '男子', MALE, meiji_law_start_day.replace(year=1898-17))
+    male_18_in_1898 = Person('18980716時点で18歳', '男子', MALE, meiji_law_start_day.replace(year=1898-18))
+    male_16_in_1898 = Person('18980716時点で16歳', '男子', MALE, meiji_law_start_day.replace(year=1898-17, day=16+1))
+    female_15_in_1898 = Person('18980716時点で15歳', '女子', FEMALE, meiji_law_start_day.replace(year=1898-15))
+    female_16_in_1898 = Person('18980716時点で16歳', '女子', FEMALE, meiji_law_start_day.replace(year=1898-16))
+    female_14_in_1898 = Person('18980716時点で14歳', '女子', FEMALE, meiji_law_start_day.replace(year=1898-15, day=16+1))
+    male_born_18980717 = Person('次の日', '生まれた男子', MALE, meiji_law_start_day.replace(day=16+1))
+    female_born_18980717 = Person('次の日', '生まれた女子', FEMALE, meiji_law_start_day.replace(day=16+1))
+
+    male_17_in_1947 = Person('19471221時点で17歳', '男子', MALE, meiji_law_end_day.replace(year=1947-17))
+    male_16_in_1947 = Person('19471221時点で16歳', '男子', MALE, meiji_law_end_day.replace(year=1947-16, day=21+1))
+    female_15_in_1947 = Person('19471221時点で15歳', '女子', FEMALE, meiji_law_end_day.replace(year=1947-15))
+    female_14_in_1947 = Person('19471221時点で14歳', '女子', FEMALE, meiji_law_end_day.replace(year=1947-14, day=21+1))
 
     @pytest.mark.parametrize(("person1", "person2", "judge_day", "marriable"),[
         (male_17_in_1898, female_15_in_1898, meiji_law_start_day, True),
@@ -67,8 +74,11 @@ class Test結婚判定_between_1898_07_16_and_1947_12_21:
         (male_17_in_1898, female_14_in_1898, meiji_law_start_day, False),
         (male_16_in_1898, female_15_in_1898, meiji_law_start_day, False),
         (male_16_in_1898, female_14_in_1898, meiji_law_start_day.replace(day=16+1), True),
-        (Person('次の日', '生まれた子', MALE, meiji_law_start_day.replace(day=16+1)), female_16_in_1898, meiji_law_start_day, False),    # male not birth
-        (male_18_in_1898, Person('次の日', '生まれた子', FEMALE, meiji_law_start_day.replace(day=16+1)), meiji_law_start_day, False),    # female not birth
+        (male_born_18980717, female_16_in_1898, meiji_law_start_day, False),    # male not born
+        (male_18_in_1898, female_born_18980717, meiji_law_start_day, False),    # female not born
+        (male_17_in_1947, female_15_in_1947, meiji_law_end_day, True),
+        (male_16_in_1947, female_15_in_1947, meiji_law_end_day, False),
+        (male_17_in_1947, female_14_in_1947, meiji_law_end_day, False),
     ])
     def test_1898年7月16日から1947年12月21日の間は17歳以上の男子と15歳以上の女子が結婚できる(self, person1, person2, judge_day, marriable):
         assert marriage_rule.can_marry(person1, person2, judge_day) == marriable
@@ -84,7 +94,8 @@ class Test不正パラメータ:
         ("male_str", female, date.today()),
         (male, "female_str", date.today()),
         (male, female, "2014/10/19"),
-    ])
+        ])
     def test_パラメータ不正でcan_marry実行時RuntimeErrorとなること(self, person1, person2, judge_day):
         with pytest.raises(RuntimeError):
             marriage_rule.can_marry(person1, person2, judge_day)
+
