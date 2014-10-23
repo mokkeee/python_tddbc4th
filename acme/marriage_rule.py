@@ -10,7 +10,7 @@ __MARRIABLE_AGE_FEMALE_MIN = 16
 
 __MEIJI_LAW_START_DAY = date(1898, 7, 16)
 
-def can_marry(person1, person2, judge_day=date.today()):
+def can_marry(person1, person2, judge_day):
     if type(person1) is not Person:
         raise RuntimeError("person1 must be Person.")
     if type(person2) is not Person:

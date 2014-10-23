@@ -85,7 +85,6 @@ class Test不正パラメータ:
             Person(family_name, first_name, gender)
 
     @pytest.mark.parametrize("birthday", [
-        None,
         "2014/10/17", # not date
         date.today() + timedelta(days=1), # future(tomorrow)
     ])
