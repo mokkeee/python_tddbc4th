@@ -1,14 +1,77 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from datetime import date
-from acme.person import Person
+from acme.person import Person, MALE
+from abc import ABCMeta, abstractmethod
 
 
-__CURRENT_LAW_START_DAY = date(1947, 12, 22)
-__MARRIABLE_AGE_MALE_MIN = 18
-__MARRIABLE_AGE_FEMALE_MIN = 16
+class MarryLaw(metaclass=ABCMeta):
+    def __init__(self, before_law):
+        self.__next = before_law
 
-__MEIJI_LAW_START_DAY = date(1898, 7, 16)
+    @abstractmethod
+    def is_marriable(self, age, gender, judge_day):
+        pass
+
+    def is_marriable_pair(self, person1, person2):
+        return True if person1.gender != person2.gender else False
+
+    @abstractmethod
+    def is_apply_law(self, day):
+        pass
+
+    def can_marry(self, person1, person2, judge_day):
+        if not self.is_apply_law(judge_day):
+            return self.__next.can_marry(person1, person2, judge_day)
+
+        if not self.is_marriable_pair(person1, person2):
+            return False
+
+        for person in [person1, person2]:
+            age = person.age(judge_day)
+            if age is None:
+                return False
+            if not self.is_marriable(age, person.gender, judge_day):
+                return False
+        else:
+            return True
+
+class CurrentLaw(MarryLaw):
+    __LAW_START_DAY = date(1947, 12, 22)
+    __MARRIABLE_AGE_MALE_MIN = 18
+    __MARRIABLE_AGE_FEMALE_MIN = 16
+
+    def is_apply_law(self, day):
+        return True if day >= self.__LAW_START_DAY else False
+
+    def is_marriable(self, age, gender, judge_day):
+        if gender is MALE:
+            return True if age >= self.__MARRIABLE_AGE_MALE_MIN else False
+        else:
+            return True if age>= self.__MARRIABLE_AGE_FEMALE_MIN else False
+
+class MeijiLaw(MarryLaw):
+    __LAW_START_DAY = date(1898, 7, 16)
+    __MARRIABLE_AGE_MALE_MIN = 17
+    __MARRIABLE_AGE_FEMALE_MIN = 15
+
+    def is_apply_law(self, day):
+        return True if day >= self.__LAW_START_DAY else False
+
+    def is_marriable(self, age, gender, judge_day):
+        if gender is MALE:
+            return True if age >= self.__MARRIABLE_AGE_MALE_MIN else False
+        else:
+            return True if age>= self.__MARRIABLE_AGE_FEMALE_MIN else False
+
+class BeforeMeijiLaw(MarryLaw):
+    def is_apply_law(self, day):
+        return True
+
+    def is_marriable(self, age, gender, judge_day):
+        return True
+
+__MARRY_LAW = CurrentLaw(MeijiLaw(BeforeMeijiLaw(None)))
 
 def can_marry(person1, person2, judge_day):
     if type(person1) is not Person:
@@ -18,32 +81,4 @@ def can_marry(person1, person2, judge_day):
     if type(judge_day) is not date:
         raise RuntimeError("judge_day must be date.")
 
-    if person1.gender == person2.gender:
-        return False
-
-    if person1.is_male():
-        male = person1
-        female = person2
-    else:
-        male = person2
-        female = person1
-
-    if judge_day >= __CURRENT_LAW_START_DAY:
-        marriable_age_male_min = 18
-        marriable_age_female_min = 16
-    elif judge_day >= __MEIJI_LAW_START_DAY:
-        marriable_age_male_min = 17
-        marriable_age_female_min = 15
-    else:
-        marriable_age_male_min = 0
-        marriable_age_female_min = 0
-
-    male_age = male.age(judge_day)
-    if male_age is None or male_age < marriable_age_male_min:
-        return False
-
-    female_age = female.age(judge_day)
-    if female_age is None or female_age < marriable_age_female_min:
-        return False
-
-    return True
+    return __MARRY_LAW.can_marry(person1, person2, judge_day)
