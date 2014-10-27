@@ -89,6 +89,6 @@ class Person:
             res += ' [MALE]'
         else:
             res += ' [FEMALE]'
-        res += ' birthday:' + self._birthday.__str__() + ')'
+        res += ' birthday:' + self._birthday + ')'
         return res
 
