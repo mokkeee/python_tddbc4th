@@ -70,8 +70,11 @@ class Person:
         if self.birthday > base_date:
             return None
 
+        def is_birthday_past_check_year(birthday, check_date):
+            return True  if birthday <= check_date.replace(year=birthday.year) else False
+
         year_diff = base_date.year - self.birthday.year
-        if self.birthday <= base_date.replace(year=self.birthday.year):
+        if is_birthday_past_check_year(self.birthday, base_date):
             return year_diff
         else:
             return year_diff - 1
